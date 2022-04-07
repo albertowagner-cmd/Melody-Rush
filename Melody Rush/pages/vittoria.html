@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+        <style>
+            body
+            {
+                font-family: 'Architects Daughter', cursive;
+                overflow: hidden;
+                display:grid;
+                background-size:cover;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                background-image: url("../images/background/closet.png");
+                display:grid;
+                grid-template-rows: auto 1fr auto;
+            }
+            h1
+            {
+                font-size: 6vw;
+                text-align: center;
+            }
+            h2
+            {
+                font-size: 3vw;
+                text-align: center;
+            }
+            div#barraColorata1
+            {
+                margin-top: 5vw;
+                background-color:rgba(152, 91, 148, 0.918);
+                
+            }
+            div#barraColorata2
+            {
+                
+                
+                background-color:rgba(186, 102, 102, 0.815);
+                
+
+            }
+
+            
+            a
+            {
+                text-decoration: none;
+                color:black;
+            }
+            a:hover
+            {
+                color:royalblue;
+            }
+
+        </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <script>
+           $(document).ready(function()
+            {
+                
+                var livello=parseInt(localStorage.getItem('livelloCorrente'));
+                var prossimoDialogo=livello+1;
+                $("h2").animate({
+                    right: '20%',
+                    
+                    fontSize: '5vw',
+                },2000);
+
+                $("#cambioLivello").click(function (event)
+                {
+                    event.preventDefault();
+                    //alert("ciao");
+                    if(livello==1) 
+                        $(location).attr('href', 'dialogo'+prossimoDialogo+'.html');
+
+                    if(livello==2) 
+                        $(location).attr('href', 'dialogo'+prossimoDialogo+'.html'); 
+
+                    if(livello==3) 
+                        $(location).attr('href', 'dialogoFinale.html');
+
+
+                });
+                
+
+
+            });
+            
+               
+           
+        </script>
+
+
+    </head>
+    <body>
+
+        <div id="barraColorata1">
+            <h1>Livello Completato!</h1>
+        </div>
+
+        <div id="barraColorata2">
+            <a href="" id="cambioLivello"> <h2>Clicca per andare al prossimo!</h2> </a>
+        </div>
+    </body>
+</html>

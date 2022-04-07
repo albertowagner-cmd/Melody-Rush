@@ -1,0 +1,69 @@
+body
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Architects Daughter', cursive;
+    overflow: hidden;
+    
+    
+}
+
+div.centered
+{
+    display: grid;
+    place-items:center;
+    width:100%;
+}
+
+button#skipDialoghi
+{
+    width:5vw;
+    height:2.5vw;
+    font-size:1vw;
+    position:absolute;
+    top:11vw;
+}
+
+div.box-dialogo
+{
+    background-color: rgba(199, 199, 219, 0.76);
+    width:70%;
+    border:solid 2px black;
+    padding:1vw;
+    margin-top:1.5vw;
+    height: 13vw;
+}
+
+p.parlante
+{
+    font-size:1.8vw;
+    border-bottom:solid 2px black;
+    color:red;
+}
+p.dialogo
+{
+    font-size:1.5vw;
+    /*font-family: Helvetica;*/
+}
+
+div#tipaSinistra
+{
+    float:left;
+    
+}
+div#tipaDestra
+{
+    
+    float:right
+    
+}
+
+
+
+div.tipa img
+{
+    width:25vw;
+    margin-top:1vw;
+}
+
+
